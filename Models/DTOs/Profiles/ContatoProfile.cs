@@ -7,7 +7,7 @@ namespace ProvaBlue.Models.DTOs.Profiles {
             CreateMap<ContatoModel, ContatoAutoMapperDTO>().
                 ForMember(
                 dest => dest.PartialInfo,
-                src => src.MapFrom(c => $"O nome du usuário é: {c.Nome}, e o e-mail é {c.Email}")).
+                src => src.MapFrom(c => $"O nome do usuário é: {c.Nome}, e o e-mail é {c.Email}")).
                 ForMember(
                 dest => dest.Number,
                 src => src.MapFrom(c => $"O número é: {c.Numero}"
