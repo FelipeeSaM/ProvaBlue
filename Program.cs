@@ -1,3 +1,5 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -33,10 +35,14 @@ builder.Services.AddSwaggerGen(c => {
 #endregion
 
 builder.Services.AddTransient<ErrorHandlerExtension>();
+builder.Services.AddValidatorsFromAssemblyContaining<ContatoModelValidator>();
+builder.Services.AddFluentValidationAutoValidation().
+    AddFluentValidationClientsideAdapters();
 
 var connection = builder.Configuration.GetConnectionString("MSSQLConnection:MSSQLConnectionString");
 builder.Services.AddDbContext<Prova_db_context>(options => options.UseSqlServer(connection));
 builder.Services.AddScoped<IContatoBusiness, ContatoBusinessImplementations>();
+//builder.Services.AddScoped<IValidator<ContatoModel>, ContatoModelValidator>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
 builder.Services.AddApiVersioning();
@@ -50,7 +56,14 @@ var app = builder.Build();
 if(app.Environment.IsDevelopment()) {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+    app.UseDeveloperExceptionPage();
+} 
+//else {
+//    // adiciona alguma página padrão de erro e redireciona para lá (ex: /error).
+//    app.UseExceptionHandler();
+//    // aumenta a segurança forçando o navegador a utilizar o protocolo HTTPS e mantendo o HSTS em cache.
+//    app.UseHsts();
+//}
 
 app.UseHttpsRedirection();
 app.UseCors();
