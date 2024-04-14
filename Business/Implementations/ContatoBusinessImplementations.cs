@@ -12,58 +12,28 @@ namespace ProvaBlue.Business.Implementations {
         }
 
         public async Task<List<ContatoModel>> ListarTodosContatos() {
-            try {
-                return await _context.FindAll();
-            }
-            catch(Exception) {
-
-                throw;
-            }
+            return await _context.FindAll();
         }
 
         public async Task<ContatoModel> ListarPorId(int id) {
-            try {
-                var contact = await _context.FindById(id);
-                if(contact == null) {
-                    return null;
-                }
-                return contact;
+            var contact = _context.FindById(id);
+            if(contact == null) {
+                return null;
             }
-            catch(Exception) {
-
-                throw;
-            }
+            return contact;
         }
 
         public async Task<ContatoModel> CriarContato(ContatoModel contato) {
-            try {
-                return await _context.Create(contato);
-            }
-            catch(Exception) {
-
-                throw;
-            }
+            return await _context.Create(contato);
         }
 
         public async Task<ContatoModel> ModificarContato(ContatoModel contato) {
-            try {
-                await _context.Update(contato);
-            }
-            catch(Exception) {
-
-                throw;
-            }
+            await _context.Update(contato);
             return contato;
         }
 
         public void DeletarContato(int id) {
-            try {
-                _context.Delete(id);
-            }
-            catch(Exception) {
-
-                throw;
-            }
+            _context.Delete(id);
         }
 
     }
