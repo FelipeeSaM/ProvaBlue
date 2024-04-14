@@ -4,6 +4,7 @@ using Microsoft.OpenApi.Models;
 using ProvaBlue.Business;
 using ProvaBlue.Business.Implementations;
 using ProvaBlue.Db;
+using ProvaBlue.Extensions;
 using ProvaBlue.Models;
 using ProvaBlue.Repository.Generic;
 
@@ -30,6 +31,8 @@ builder.Services.AddSwaggerGen(c => {
     );
 });
 #endregion
+
+builder.Services.AddTransient<ErrorHandlerExtension>();
 
 var connection = builder.Configuration.GetConnectionString("MSSQLConnection:MSSQLConnectionString");
 builder.Services.AddDbContext<Prova_db_context>(options => options.UseSqlServer(connection));
@@ -64,6 +67,7 @@ app.UseAuthentication();
 #endregion
 
 app.UseAuthorization();
+app.UseMiddleware<ErrorHandlerExtension>();
 
 app.MapControllers();
 
