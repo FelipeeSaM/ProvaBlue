@@ -14,6 +14,9 @@ using ProvaBlue.Repository.Generic;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options => options.AddDefaultPolicy(builder => {
+    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+}));
 
 // Add services to the container.
 

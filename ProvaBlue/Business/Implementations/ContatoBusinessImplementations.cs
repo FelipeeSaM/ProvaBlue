@@ -24,6 +24,10 @@ namespace ProvaBlue.Business.Implementations {
         }
 
         public async Task<ContatoModel> CriarContato(ContatoModel contato) {
+            var isEmailExisting = _context.FindByPredicate(c => c.Email.Equals(contato.Email));
+            if(isEmailExisting != null) {
+                return null;
+            }
             return await _context.Create(contato);
         }
 
