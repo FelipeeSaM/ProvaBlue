@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProvaBlue.Db;
 
@@ -10,9 +11,11 @@ using ProvaBlue.Db;
 namespace ProvaBlue.Migrations
 {
     [DbContext(typeof(Prova_db_context))]
-    partial class Prova_db_contextModelSnapshot : ModelSnapshot
+    [Migration("20240415034757_creating_users_and_seed")]
+    partial class creating_users_and_seed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
