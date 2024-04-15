@@ -24,8 +24,6 @@ async function entrar(e) {
       localStorage.setItem('password', data.password)
       localStorage.setItem('token', response.data.token)
 
-      console.log(response.data.token)
-
       router.push('/contact');
     } else {
       alert("não consegui te logar")
