@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProvaBlue.Db;
 using ProvaBlue.Models.Base;
+using System.Linq.Expressions;
+using System;
 
 namespace ProvaBlue.Repository.Generic {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseModel {
@@ -19,6 +21,10 @@ namespace ProvaBlue.Repository.Generic {
 
         public T FindById(int id) {
             return _dbSet.First(c => c.Id.Equals(id));
+        }
+
+        public T FindByPredicate(Expression<Func<T, bool>> predicate) {
+            return _dbSet.FirstOrDefault(predicate);
         }
 
         public async Task<T> Create(T item) {
