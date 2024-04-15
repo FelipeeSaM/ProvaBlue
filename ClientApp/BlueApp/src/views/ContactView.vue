@@ -30,7 +30,7 @@ async function entrar(e) {
 
 <template>
   <div class="container">
-    IMPLEMENTE A LISTA AQUI
+    IMPLEMENTE A LISTA AQUI s
   </div>
 </template>
 
