@@ -21,6 +21,9 @@ v Aqui temos um exemplo da utilização do **AutoMapper**:
 v Já aqui temos uma demonstração do **FluentValidation**
 ![FluentValidation](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Fluent_validator.png)
 
+v Abaixo, de quebra, um **Error Handler** devidamente configurado para proteger a aplicação de exibir dados sensíveis e partes do código quando houver exceções.
+![ErrorHandler](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Error_handler.png)
+
 
 Agora indo ao **Postman**, vamos fazer uma requisição para a rota do login, como mostra a figura abaixo. Forneça no *body* da requisição, em formato *JSON* e no verbo **POST**, estas mesmas informações.
 ![Login](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Login.png)
@@ -31,3 +34,4 @@ Pronto, agora estamos com o nosso token JWT funcionando. Para acessar as rotas s
 (configure na aba **Authorization** o tipo **Bearer**, e então cole o token recém-gerado no campo ao lado)
 
 Isto testará a autenticação via token JWT. Para testar a autorização, basta seguir para a rota do *employee*, descrita na primeira imagem, e você deverá receber a minha mensagem final e ultra secreta :smile: :smile: .
+Obrigado por ler até o final 😊 .
