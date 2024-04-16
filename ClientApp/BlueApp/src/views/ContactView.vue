@@ -34,6 +34,16 @@ const redirectToEdit = (id) => {
   }
 };
 
+async function redirectToAdd() {
+  try {
+
+    router.push(`/add`)
+
+  } catch (error) {
+
+  }
+}
+
 async function DeleteContact(id) {
   const response = await Api.delete(`/api/v1/contato/${id}`);
   window.location.reload()
@@ -47,6 +57,7 @@ async function DeleteContact(id) {
     </div>
     <div v-else>
       <div class="p-datatable">
+        <Button label="Adicionar" @click="redirectToAdd()" />
         <div class="p-datatable-wrapper">
           <table>
             <thead>
