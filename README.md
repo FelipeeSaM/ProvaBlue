@@ -1,4 +1,4 @@
-Olá! Após baixar o repositório na sua máquina, você tem que primeiramente configurar a sua string de conexão. Isto é feito no arquivo **Prova_db_context**.
+Olá! Após baixar o repositório na sua máquina, você tem que primeiramente configurar a sua string de conexão. Isto é feito no arquivo **Prova_db_context** e no **appsettings.json**.
 O banco de dados usado foi o SQL server.
 Após configurar a conexão com o banco, você terá de abrir o terminal do seu visual studio e digitar o comando:
 ```
