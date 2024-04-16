@@ -5275,11 +5275,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\luiz_\\Desktop\\rot\\oi\\ProvaBlue\\ProvaBlue.Tests\\ProvaBlue.Tests.csproj",
+      "projectUniqueName": "D:\\repos\\prova\\ProvaBlue.Tests\\ProvaBlue.Tests.csproj",
       "projectName": "ProvaBlue.Tests",
-      "projectPath": "C:\\Users\\luiz_\\Desktop\\rot\\oi\\ProvaBlue\\ProvaBlue.Tests\\ProvaBlue.Tests.csproj",
+      "projectPath": "D:\\repos\\prova\\ProvaBlue.Tests\\ProvaBlue.Tests.csproj",
       "packagesPath": "C:\\Users\\luiz_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\luiz_\\Desktop\\rot\\oi\\ProvaBlue\\ProvaBlue.Tests\\obj\\",
+      "outputPath": "D:\\repos\\prova\\ProvaBlue.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\luiz_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5296,8 +5296,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\luiz_\\Desktop\\rot\\oi\\ProvaBlue\\ProvaBlue\\ProvaBlue.csproj": {
-              "projectPath": "C:\\Users\\luiz_\\Desktop\\rot\\oi\\ProvaBlue\\ProvaBlue\\ProvaBlue.csproj"
+            "D:\\repos\\prova\\ProvaBlue\\ProvaBlue.csproj": {
+              "projectPath": "D:\\repos\\prova\\ProvaBlue\\ProvaBlue.csproj"
             }
           }
         }

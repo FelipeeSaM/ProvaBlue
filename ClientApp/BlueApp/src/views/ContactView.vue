@@ -7,9 +7,9 @@ const contatos = ref([]);
 const router = useRouter();
 
 onBeforeMount(async () => {
-  // não consegui fazer utilizando algo como windiw.addEventListener('load')...
+  // não consegui fazer utilizando algo como windiw.addEventListener('load', ...)
   const token = localStorage.getItem('token');
-  console.log(token)
+  
   if(token == null) {
     alert("usuário não autenticado")
     router.push('/');
@@ -17,12 +17,27 @@ onBeforeMount(async () => {
     try {
       const response = await Api.get('/api/v1/contato');
       contatos.value = response.data;
-      console.table(response.data)
+
     } catch (error) {
       console.error('Erro ao obter a lista de contatos:', error);
     }
   }
 });
+
+const redirectToEdit = (id) => {
+  try {
+
+    router.push(`/edit/${id}`)
+
+  } catch (error) {
+    
+  }
+};
+
+async function DeleteContact(id) {
+  const response = await Api.delete(`/api/v1/contato/${id}`);
+  window.location.reload()
+}
 </script>
 
 <template>
@@ -36,6 +51,7 @@ onBeforeMount(async () => {
           <table>
             <thead>
               <tr>
+                <th>id</th>
                 <th>Nome</th>
                 <th>Email</th>
                 <th>Número</th>
@@ -43,9 +59,12 @@ onBeforeMount(async () => {
             </thead>
             <tbody>
               <tr v-for="(contato, index) in contatos" :key="index">
+                <td>{{ contato.id }}</td>
                 <td>{{ contato.nome }}</td>
                 <td>{{ contato.email }}</td>
                 <td>{{ contato.numero }}</td>
+                <Button label="Editar" @click="redirectToEdit(contato.id)" />
+                <Button label="Deletar" severity="danger" @click="DeleteContact(contato.id)" />
               </tr>
             </tbody>
           </table>
@@ -62,5 +81,20 @@ onBeforeMount(async () => {
     display: flex;
     align-items: center;
   }
+}
+
+.container {
+  margin-top: 15px;
+}
+
+Button {
+  margin-left: 15px
+}
+
+td {
+  margin-bottom: 5px;
+  border-bottom: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  border-radius: 5px;
 }
 </style>

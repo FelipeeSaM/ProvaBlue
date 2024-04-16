@@ -1,6 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 
+function deslogar() {
+  localStorage.clear();
+  alert("deslogado");
+}
+
 </script>
 
 <template>
@@ -11,8 +16,9 @@ import { RouterLink, RouterView } from 'vue-router'
   <div class="container">
     <div class="wrapper">
       <nav>
-        <RouterLink to="/" style="margin-right: 15px;">login</RouterLink>
-        <RouterLink to="/contact">Lista de contatos</RouterLink>
+        <RouterLink to="/" class="link" >login</RouterLink>
+        <RouterLink to="/contact" class="link">Lista de contatos</RouterLink>
+        <a @click="deslogar" class="link" >Logout</a>
       </nav>
     </div>
   </div>
@@ -24,5 +30,9 @@ import { RouterLink, RouterView } from 'vue-router'
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.link {
+  margin-right: 15px;
 }
 </style>

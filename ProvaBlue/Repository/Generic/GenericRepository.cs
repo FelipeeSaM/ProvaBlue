@@ -20,7 +20,9 @@ namespace ProvaBlue.Repository.Generic {
         }
 
         public T FindById(int id) {
-            return _dbSet.First(c => c.Id.Equals(id));
+            var result = _dbSet.First(c => c.Id.Equals(id));
+            if(result == null) return null;
+            return result;
         }
 
         public T FindByPredicate(Expression<Func<T, bool>> predicate) {
