@@ -4,7 +4,7 @@ Após configurar a conexão com o banco, você terá de abrir o terminal do seu 
 ```
 dotnet ef database update
 ```
-Isto garantirá que seja criado no seu banco de dados as tabelas com alguns dados já inseridos.
+Isto garantirá que seja criado no seu banco de dados as tabelas com alguns dados gerados aleatoriamente com a biblioteca do *Bogus* já inseridos.
 Já para a utilização do client front-end, você terá de abrir a pasta **ClientApp** um dretóro acima, e a recomendação é fazê-lo com o *VSCode*.
 Com o *VSCode* aberto na pasta, abra o termnal ou aperte as teclas **ctrl + shft + '**. Com o terminal aberto, caminhe uma pasta à frente com o comando ```cd .\BlueApp\```.
 Agora você já está com o terminal na pasta onde tem-se localizado o arquivo **package.json**, então digite o comando ```npm install``` para instalar as dependências, e depois ```npm run dev```.
