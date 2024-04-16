@@ -12,8 +12,19 @@ Agora você já está com o terminal na pasta onde tem-se localizado o arquivo *
 
 
 ![swagger completo](https://github.com/FelipeeSaM/ProvaBlue/blob/master/swagger_completo.png)
-/\ Esta é a cara do swagger com as documentações.
+^ Esta é a cara do swagger com as documentações.
 
 
-\/ Aqui temos um exemplo da utilização do **AutoMapper**:
-![swagger completo](https://github.com/FelipeeSaM/ProvaBlue/blob/master/automapper.png)
+v Aqui temos um exemplo da utilização do **AutoMapper**:
+![AutoMapper](https://github.com/FelipeeSaM/ProvaBlue/blob/master/automapper.png)
+
+
+Agora indo ao **Postman**, vamos fazer uma requisição para a rota do login, como mostra a figura abaixo. Forneça no *body* da requisição, em formato *JSON*, estas mesmas informações.
+![Login](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Login.png)
+
+
+Pronto, agora estamos com o nosso token JWT funcionando. Para acessar as rotas seguintes, será necessário passar esse token no cabeçalho das próximas requisições, conforme a figura abaixo:
+![Authentication](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Authentication.png)
+(configure na aba **Authorization** o tipo **Bearer**, e então cole o token recém-gerado no campo ao lado)
+
+Isto testará a autenticação via token JWT. Para testar a autorização, basta seguir para a rota do *employee*, descrita na primeira imagem, e você deverá receber a minha mensagem final e ultra secreta :smile: :smile: .
