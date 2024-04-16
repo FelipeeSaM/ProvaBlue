@@ -19,11 +19,11 @@ v Aqui temos um exemplo da utilização do **AutoMapper**:
 ![AutoMapper](https://github.com/FelipeeSaM/ProvaBlue/blob/master/automapper.png)
 
 
-Agora indo ao **Postman**, vamos fazer uma requisição para a rota do login, como mostra a figura abaixo. Forneça no *body* da requisição, em formato *JSON*, estas mesmas informações.
+Agora indo ao **Postman**, vamos fazer uma requisição para a rota do login, como mostra a figura abaixo. Forneça no *body* da requisição, em formato *JSON* e no verbo **POST**, estas mesmas informações.
 ![Login](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Login.png)
 
 
-Pronto, agora estamos com o nosso token JWT funcionando. Para acessar as rotas seguintes, será necessário passar esse token no cabeçalho das próximas requisições, conforme a figura abaixo:
+Pronto, agora estamos com o nosso token JWT funcionando. Para acessar as rotas seguintes, será necessário passar esse token no cabeçalho das próximas requisições e com o verbo **GET**, conforme a figura abaixo:
 ![Authentication](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Authentication.png)
 (configure na aba **Authorization** o tipo **Bearer**, e então cole o token recém-gerado no campo ao lado)
 
