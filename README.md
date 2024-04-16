@@ -18,6 +18,9 @@ Agora você já está com o terminal na pasta onde tem-se localizado o arquivo *
 v Aqui temos um exemplo da utilização do **AutoMapper**:
 ![AutoMapper](https://github.com/FelipeeSaM/ProvaBlue/blob/master/automapper.png)
 
+v Já aqui temos uma demonstração do **FluentValidation**
+![FluentValidation](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Fluent_validator.png)
+
 
 Agora indo ao **Postman**, vamos fazer uma requisição para a rota do login, como mostra a figura abaixo. Forneça no *body* da requisição, em formato *JSON* e no verbo **POST**, estas mesmas informações.
 ![Login](https://github.com/FelipeeSaM/ProvaBlue/blob/master/Login.png)
