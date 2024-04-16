@@ -34,4 +34,5 @@ Pronto, agora estamos com o nosso token JWT funcionando. Para acessar as rotas s
 (configure na aba **Authorization** o tipo **Bearer**, e então cole o token recém-gerado no campo ao lado)
 
 Isto testará a autenticação via token JWT. Para testar a autorização, basta seguir para a rota do *employee*, descrita na primeira imagem, e você deverá receber a minha mensagem final e ultra secreta :smile: :smile: .
+
 Obrigado por ler até o final 😊 .
